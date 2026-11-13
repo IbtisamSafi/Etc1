@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النادي الهندسي والتكنولوجي ETC | توزيع مهام لجان الأسبوع التقني</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f7fa;
+            color: #0b192c;
+            overflow-x: hidden;
+        }
+
+        .committee-card {
+            background: linear-gradient(180deg, #0c1d33 0%, #091526 100%);
+            border: 1px solid rgba(20, 184, 166, 0.2);
+            box-shadow: 0 10px 25px -8px rgba(11, 25, 44, 0.25);
+        }
+
+        .outline-number {
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 1.5px rgba(20, 184, 166, 0.45);
+            line-height: 1;
+            user-select: none;
+        }
+
+        .sheets-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .sheets-scroll::-webkit-scrollbar-track {
+            background: #0f233c;
+        }
+
+        .sheets-scroll::-webkit-scrollbar-thumb {
+            background: #14b8a6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <!-- الهيدر العلوي -->
+    <header class="bg-[#0b192c] text-white sticky top-0 z-40 shadow-lg border-b border-teal-500/20">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div>
+                <h1 class="text-base sm:text-lg font-extrabold tracking-tight text-white">
+                    النادي الهندسي والتكنولوجي
+                </h1>
+                <p class="text-xs text-teal-400 font-medium">
+                    جامعة الأقصى • خطة عمل لجان الأسبوع التقني (19 – 25 نوفمبر 2026)
+                </p>
+            </div>
+        </div>
+
+        <!-- شريط التنقل السريع بين الشيتات السبعة (روابط HTML عادية) -->
+        <nav class="bg-[#081220] border-t border-white/10">
+            <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-2 overflow-x-auto sheets-scroll py-2.5 text-xs font-bold">
+                    <a href="#overview" class="px-3.5 py-2 rounded-xl bg-teal-500 text-[#0b192c] whitespace-nowrap">
+                        ملخص الأسبوع
+                    </a>
+                    <a href="#sheet-1"
+                        class="px-3.5 py-2 rounded-xl bg-[#0f233c] text-slate-200 hover:bg-teal-500/20 hover:text-teal-300 border border-white/10 whitespace-nowrap">
+                        شيت 1: افتتاح + AI
+                    </a>
+                    <a href="#sheet-2"
+                        class="px-3.5 py-2 rounded-xl bg-[#0f233c] text-slate-200 hover:bg-teal-500/20 hover:text-teal-300 border border-white/10 whitespace-nowrap">
+                        شيت 2: الأمن السيبراني
+                    </a>
+                    <a href="#sheet-3"
+                        class="px-3.5 py-2 rounded-xl bg-[#0f233c] text-slate-200 hover:bg-teal-500/20 hover:text-teal-300 border border-white/10 whitespace-nowrap">
+                        شيت 3: Problem Solving
+                    </a>
+                    <a href="#sheet-4"
+                        class="px-3.5 py-2 rounded-xl bg-[#0f233c] text-slate-200 hover:bg-teal-500/20 hover:text-teal-300 border border-white/10 whitespace-nowrap">
+                        شيت 4: ICDL Workshop
+                    </a>
+                    <a href="#sheet-5"
+                        class="px-3.5 py-2 rounded-xl bg-[#0f233c] text-slate-200 hover:bg-teal-500/20 hover:text-teal-300 border border-white/10 whitespace-nowrap">
+                        شيت 5: UI/UX Design
+                    </a>
+                    <a href="#sheet-6"
+                        class="px-3.5 py-2 rounded-xl bg-[#0f233c] text-slate-200 hover:bg-teal-500/20 hover:text-teal-300 border border-white/10 whitespace-nowrap">
+                        شيت 6: Git & GitHub
+                    </a>
+                    <a href="#sheet-7"
+                        class="px-3.5 py-2 rounded-xl bg-[#0f233c] text-slate-200 hover:bg-teal-500/20 hover:text-teal-300 border border-white/10 whitespace-nowrap">
+                        شيت 7: سوق العمل + الختام
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <!-- قسم الملخص العام -->
+        <section id="overview" class="scroll-mt-36 space-y-6">
+            <div class="bg-[#0b192c] text-white rounded-2xl p-6 sm:p-8 border border-teal-500/30 shadow-xl">
+                <span
+                    class="bg-teal-500/20 text-teal-300 text-xs font-bold px-3 py-1 rounded-full border border-teal-500/30">
+                    دليل العمل الرسمي • 19 – 25 نوفمبر 2026
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black mt-3 mb-2">
+                    خطة توزيع مهام لجان الأسبوع التقني
+                </h2>
+                <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+                    يوضح هذا الدليل المهام التشغيلية والتنظيمية الموكلة لكل لجنة من لجان النادي الهندسي والتكنولوجي
+                    الخمس في كل ورشة من ورشات الأسبوع.
+                </p>
+            </div>
+
+            <!-- بطاقات اللجان الخمس -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="bg-white rounded-2xl p-4 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span
+                            class="w-9 h-9 rounded-xl bg-[#0b192c] text-teal-400 flex items-center justify-center text-sm"><i
+                                class="fa-solid fa-building-user"></i></span>
+                        <span class="text-2xl font-black text-slate-200">01</span>
+                    </div>
+                    <h3 class="font-extrabold text-sm text-[#0b192c] mb-1">لجنة الأنشطة والفعاليات</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">توفير وتجهيز المكان/القاعة، التنظيم الميداني،
+                        وإدارة الفعاليات والورشات.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span
+                            class="w-9 h-9 rounded-xl bg-[#0b192c] text-amber-400 flex items-center justify-center text-sm"><i
+                                class="fa-solid fa-users-viewfinder"></i></span>
+                        <span class="text-2xl font-black text-slate-200">02</span>
+                    </div>
+                    <h3 class="font-extrabold text-sm text-[#0b192c] mb-1">لجنة العضوية والانتساب</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">إعداد فورم التسجيل، استقبال الطلبة، حصر أعداد
+                        الحضور وتحديث قاعدة البيانات.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span
+                            class="w-9 h-9 rounded-xl bg-[#0b192c] text-emerald-400 flex items-center justify-center text-sm"><i
+                                class="fa-solid fa-laptop-code"></i></span>
+                        <span class="text-2xl font-black text-slate-200">03</span>
+                    </div>
+                    <h3 class="font-extrabold text-sm text-[#0b192c] mb-1">اللجنة التقنية والتدريب</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">تقديم الورشة في حال عدم توفر مدرب أو مساندة المدرب
+                        تقنياً وتجهيز البيئة التطبيقية.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span
+                            class="w-9 h-9 rounded-xl bg-[#0b192c] text-sky-400 flex items-center justify-center text-sm"><i
+                                class="fa-solid fa-bullhorn"></i></span>
+                        <span class="text-2xl font-black text-slate-200">04</span>
+                    </div>
+                    <h3 class="font-extrabold text-sm text-[#0b192c] mb-1">لجنة الإعلامية والمنصات الرقمية</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">تصميم البوسترات، إدارة حسابات
+                        Facebook/Instagram/LinkedIn، التصوير والتوثيق.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span
+                            class="w-9 h-9 rounded-xl bg-[#0b192c] text-purple-400 flex items-center justify-center text-sm"><i
+                                class="fa-solid fa-handshake"></i></span>
+                        <span class="text-2xl font-black text-slate-200">05</span>
+                    </div>
+                    <h3 class="font-extrabold text-sm text-[#0b192c] mb-1">لجنة العلاقات العامة والشراكات</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">التواصل مع المدربين والمحاضرين والشركاء، تنسيق
+                        المواعيد، الاستقبال والتكريم.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-slate-200">
+
+        <!-- ==================== شيت 1 ==================== -->
+        <section id="sheet-1" class="scroll-mt-36 space-y-5">
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-teal-500"></div>
+                <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold">
+                    <span class="bg-[#0b192c] text-teal-400 px-3 py-1 rounded-full">شيت 1 من 7</span>
+                    <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full">وجاهي (فرع خانيونس)</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">الخميس 19/11/2026 • 10:00 ص – 1:00
+                        م</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0b192c] mb-2">افتتاح الأسبوع التقني + الذكاء الاصطناعي
+                    وأدواته + Tech Path</h2>
+                <p class="text-sm text-slate-600">المحاضر: <strong class="text-[#0b192c]">يُحدد لاحقاً</strong> | الجهة:
+                    <strong class="text-[#0b192c]">كلية الحاسبات وتكنولوجيا المعلومات</strong>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الأنشطة والفعاليات</h3>
+                        <span class="outline-number text-4xl">01</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-teal-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• حجز وتجهيز القاعة الرئيسية في
+                            فرع خانيونس للافتتاح والورشة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز الصوتيات والبروجيكتور
+                            وترتيب مقاعد الضيوف والطلبة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إدارة التنظيم الميداني وتقديم
+                            فقرة عرافة الافتتاح.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العضوية والانتساب</h3>
+                        <span class="outline-number text-4xl">02</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-amber-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إعداد ونشر فورم التسجيل في
+                            ورشة الافتتاح والذكاء الاصطناعي.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• استقبال الطلبة عند مدخل
+                            القاعة وتسجيل الحضور الفعلي.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• حصر إجمالي أعداد الحضور
+                            وإدخال بيانات المنتسبين الجدد.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">اللجنة التقنية والتدريب</h3>
+                        <span class="outline-number text-4xl">03</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-emerald-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز العرض التقديمي التعريفي
+                            للنادي وتجربة أجهزة العرض.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تحضير مدرب بديل من اللجنة
+                            لتغطية محور Tech Path أو AI عند الحاجة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• مساندة المحاضر تقنياً خلال
+                            التطبيقات الحية لأدوات الذكاء الاصطناعي.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الإعلامية والمنصات</h3>
+                        <span class="outline-number text-4xl">04</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-sky-400"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصميم ونشر بوستر انطلاق
+                            الأسبوع التقني والورشة الأولى.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التصوير الفوتوغرافي والفيديو
+                            لحفل الافتتاح وتفاعل الطلبة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• نشر تقرير مصور لليوم الأول
+                            على Facebook وInstagram وLinkedIn.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العلاقات العامة</h3>
+                        <span class="outline-number text-4xl">05</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-purple-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التنسيق مع عمادة كلية
+                            الحاسبات لتأكيد اسم المحاضر ومحاور الافتتاح.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• دعوة إدارة الفرع وأعضاء
+                            الهيئة التدريسية لحضور الافتتاح.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• استقبال المحاضرين والضيوف
+                            وتقديم درع/شهادة شكر للمحاضر.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== شيت 2 ==================== -->
+        <section id="sheet-2" class="scroll-mt-36 space-y-5">
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-sky-500"></div>
+                <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold">
+                    <span class="bg-[#0b192c] text-teal-400 px-3 py-1 rounded-full">شيت 2 من 7</span>
+                    <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full">إلكتروني (Online)</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">الجمعة 20/11/2026 • 10:00 ص – 1:00
+                        م</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0b192c] mb-2">الأمن السيبراني والحماية الرقمية
+                    (Cybersecurity)</h2>
+                <p class="text-sm text-slate-600">المدرب: <strong class="text-[#0b192c]">أ. أحمد المقيد</strong> |
+                    الجهة: <strong class="text-[#0b192c]">مدرب خارجي (شراكة)</strong></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الأنشطة والفعاليات</h3>
+                        <span class="outline-number text-4xl">01</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-teal-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• توفير وتجهيز غرفة البث
+                            الإلكتروني (Zoom / Google Meet) بسعة مناسبة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إدارة غرفة البث، تنظيم
+                            المداخلات الصوتية، وضبط الوقت.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العضوية والانتساب</h3>
+                        <span class="outline-number text-4xl">02</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-amber-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إعداد فورم التسجيل الإلكتروني
+                            وإرسال رابط البث للمسجلين.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• نشر رابط تأكيد الحضور داخل
+                            الجلسة وحصر المشاركين الفعليين.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• مطابقة كشف المسجلين مع الحضور
+                            الفعلي لإصدار الشهادات.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">اللجنة التقنية والتدريب</h3>
+                        <span class="outline-number text-4xl">03</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-emerald-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التنسيق التقني مع المدرب أ.
+                            أحمد المقيد وتجربة مشاركة الشاشة والصوت.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تسجيل الجلسة بجودة عالية
+                            ومساعدة المدرب في الأسئلة التقنية.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز عضو بديل من اللجنة
+                            لتقديم ملخص عملي عند انقطاع الاتصال.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الإعلامية والمنصات</h3>
+                        <span class="outline-number text-4xl">04</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-sky-400"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصميم بوستر الورشة الثانية مع
+                            صورة المدرب أ. أحمد المقيد ونشره.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• أخذ لقطات شاشة (Screenshots)
+                            تفاعلية أثناء اللقاء الإلكتروني.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• نشر ملخص لأبرز نصائح الأمن
+                            السيبراني وتغطية الورشة على المنصات.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العلاقات العامة</h3>
+                        <span class="outline-number text-4xl">05</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-purple-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التواصل المستمر مع المدرب أ.
+                            أحمد المقيد لتأكيد الموعد والمحاور.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إرسال رسالة شكر رسمية وشهادة
+                            تقدير إلكترونية للمدرب والجهة الشريكة.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== شيت 3 ==================== -->
+        <section id="sheet-3" class="scroll-mt-36 space-y-5">
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-sky-500"></div>
+                <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold">
+                    <span class="bg-[#0b192c] text-teal-400 px-3 py-1 rounded-full">شيت 3 من 7</span>
+                    <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full">إلكتروني (Online)</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">السبت 21/11/2026 • 10:00 ص – 1:00
+                        م</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0b192c] mb-2">Problem Solving - حل المشكلات البرمجية
+                    والتفكير الخوارزمي</h2>
+                <p class="text-sm text-slate-600">المحاضر: <strong class="text-[#0b192c]">أ. أحمد</strong> | الجهة:
+                    <strong class="text-[#0b192c]">كلية الحاسبات وتكنولوجيا المعلومات</strong>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الأنشطة والفعاليات</h3>
+                        <span class="outline-number text-4xl">01</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-teal-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إنشاء وتجهيز رابط اللقاء
+                            الإلكتروني وتجربة صلاحيات المشرفين.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• افتتاح الجلسة الترحيبية
+                            وإدارة الأسئلة والنقاش مع الطلبة.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العضوية والانتساب</h3>
+                        <span class="outline-number text-4xl">02</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-amber-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إطلاق فورم التسجيل وتوجيه
+                            الطلبة لإنشاء حسابات على منصة التدريب.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• رصد وحصر أعداد الحضور وتوثيق
+                            مشاركة الطلبة في التحديات.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">اللجنة التقنية والتدريب</h3>
+                        <span class="outline-number text-4xl">03</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-emerald-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز قائمة المسائل التدريبية
+                            (Sheet) بالتنسيق مع المحاضر أ. أحمد.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• مساندة المحاضر في متابعة حلول
+                            الطلبة وتقديم التلميحات.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• جاهزية فريق التدريب باللجنة
+                            لشرح المسائل في حال تعذر المحاضر.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الإعلامية والمنصات</h3>
+                        <span class="outline-number text-4xl">04</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-sky-400"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصميم ونشر إعلان ورشة Problem
+                            Solving على جميع حسابات النادي.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• توثيق الجلسة ونشر بوست
+                            التغطية مع رابط شيت التدريب للطلبة.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العلاقات العامة</h3>
+                        <span class="outline-number text-4xl">05</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-purple-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التنسيق مع المحاضر أ. أحمد من
+                            كلية الحاسبات وتأكيد جدول الورشة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تقديم الشكر الرسمي للمحاضر
+                            وتوثيق التعاون مع الكلية.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== شيت 4 ==================== -->
+        <section id="sheet-4" class="scroll-mt-36 space-y-5">
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-teal-500"></div>
+                <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold">
+                    <span class="bg-[#0b192c] text-teal-400 px-3 py-1 rounded-full">شيت 4 من 7</span>
+                    <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full">وجاهي (فرع الوسطى)</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">الأحد 22/11/2026 • 10:00 ص – 1:00
+                        م</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0b192c] mb-2">ICDL Workshop - مهارات الحاسوب الأساسية
+                    والتطبيقات المكتبية</h2>
+                <p class="text-sm text-slate-600">المدرب: <strong class="text-[#0b192c]">أحد طلاب اللجنة
+                        التقنية</strong> | الجهة: <strong class="text-[#0b192c]">النادي الهندسي والتكنولوجي ETC</strong>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الأنشطة والفعاليات</h3>
+                        <span class="outline-number text-4xl">01</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-teal-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• حجز مختبر حاسوب مجهز في فرع
+                            الوسطى وتفقد الأجهزة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تنظيم دخول الطلبة للمختبر
+                            وتوزيعهم على الأجهزة بسلاسة.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العضوية والانتساب</h3>
+                        <span class="outline-number text-4xl">02</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-amber-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إعداد فورم التسجيل لطلبة فرع
+                            الوسطى وتحديد الطاقة الاستيعابية للمختبر.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تسجيل الحضور
+                            الورقي/الإلكتروني داخل المختبر وحصر العدد النهائي.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">اللجنة التقنية والتدريب</h3>
+                        <span class="outline-number text-4xl">03</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-emerald-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تكليف المدرب الطالب من اللجنة
+                            وإعداد الحقيبة التدريبية والملفات العملية.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التأكد من تفعيل حزمة Office
+                            على جميع أجهزة المختبر قبل البدء.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تقديم الورشة عملياً ومساعدة
+                            الطلبة في التطبيق خطوة بخطوة.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الإعلامية والمنصات</h3>
+                        <span class="outline-number text-4xl">04</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-sky-400"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصميم بوستر ورشة ICDL المخصصة
+                            لفرع الوسطى ونشره.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التواجد في فرع الوسطى لتصوير
+                            التطبيق العملي ونشر التغطية.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العلاقات العامة</h3>
+                        <span class="outline-number text-4xl">05</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-purple-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التنسيق الإداري مع إدارة فرع
+                            الوسطى لتسهيل دخول الفريق والطلبة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إصدار شهادة شكر وتقدير للمدرب
+                            الطالب تقديراً لجهوده.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== شيت 5 ==================== -->
+        <section id="sheet-5" class="scroll-mt-36 space-y-5">
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-teal-500"></div>
+                <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold">
+                    <span class="bg-[#0b192c] text-teal-400 px-3 py-1 rounded-full">شيت 5 من 7</span>
+                    <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full">وجاهي (فرع خانيونس)</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">الاثنين 23/11/2026 • 10:00 ص – 1:00
+                        م</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0b192c] mb-2">UI/UX Design - تصميم واجهات وتجربة
+                    المستخدم باستخدام Figma</h2>
+                <p class="text-sm text-slate-600">المدرب: <strong class="text-[#0b192c]">أ. محمد الشاعر</strong> |
+                    الجهة: <strong class="text-[#0b192c]">موظف في جامعة الأقصى</strong></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الأنشطة والفعاليات</h3>
+                        <span class="outline-number text-4xl">01</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-teal-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• توفير وتجهيز مختبر/قاعة مجهزة
+                            بالإنترنت في فرع خانيونس.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تنظيم القاعة وتوفير التوصيلات
+                            الكهربائية لأجهزة اللابتوب وإدارة الوقت.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العضوية والانتساب</h3>
+                        <span class="outline-number text-4xl">02</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-amber-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• نشر فورم التسجيل وتنبيه
+                            الطلبة لإحضار أجهزة اللابتوب وتجهيز حساب Figma.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• استقبال المسجلين، حصر الحضور
+                            الفعلي، وتحديث قاعدة بيانات المهتمين.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">اللجنة التقنية والتدريب</h3>
+                        <span class="outline-number text-4xl">03</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-emerald-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز ملفات الموارد
+                            (الأيقونات والخطوط) ومشاركتها مع الطلبة قبل الورشة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• مساندة المدرب أ. محمد الشاعر
+                            في حل المشاكل التقنية للطلبة أثناء التصميم.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز عضو متمكن في Figma
+                            كمساند أو بديل عند الحاجة.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الإعلامية والمنصات</h3>
+                        <span class="outline-number text-4xl">04</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-sky-400"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصميم ونشر بوستر ورشة UI/UX
+                            بلمسة بصرية إبداعية.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصوير مخرجات تصاميم الطلبة
+                            ولقطات من الورشة ونشرها على المنصات.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العلاقات العامة</h3>
+                        <span class="outline-number text-4xl">05</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-purple-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التنسيق المباشر مع الأستاذ
+                            محمد الشاعر لتأكيد الموعد ومتطلبات الورشة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• استقبال المدرب وتكريمه بشهادة
+                            شكر باسم النادي الهندسي والتكنولوجي.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== شيت 6 ==================== -->
+        <section id="sheet-6" class="scroll-mt-36 space-y-5">
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-sky-500"></div>
+                <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold">
+                    <span class="bg-[#0b192c] text-teal-400 px-3 py-1 rounded-full">شيت 6 من 7</span>
+                    <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full">إلكتروني (Online)</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">الثلاثاء 24/11/2026 • 10:00 ص –
+                        1:00 م</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0b192c] mb-2">Git & GitHub - إدارة النسخ البرمجية
+                    والعمل الجماعي</h2>
+                <p class="text-sm text-slate-600">المدرب: <strong class="text-[#0b192c]">أ. أحمد</strong> | الجهة:
+                    <strong class="text-[#0b192c]">مدرب خارجي (شراكة)</strong>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الأنشطة والفعاليات</h3>
+                        <span class="outline-number text-4xl">01</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-teal-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز رابط البث الإلكتروني
+                            والتأكد من استقرار الجلسة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إدارة الجلسة الإلكترونية
+                            وتنظيم فقرة الأسئلة التطبيقية.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العضوية والانتساب</h3>
+                        <span class="outline-number text-4xl">02</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-amber-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إعداد فورم التسجيل وإرسال
+                            تعليمات تثبيت Git وإنشاء حساب GitHub.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تسجيل وحصر أعداد الحضور
+                            الإلكتروني وتوثيق المشاركين.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">اللجنة التقنية والتدريب</h3>
+                        <span class="outline-number text-4xl">03</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-emerald-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز مستودع تدريبي
+                            (Repository) للتطبيق العملي بالتنسيق مع المدرب.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• مساعدة الطلبة في حل أخطاء
+                            الأوامر (Conflicts) أثناء التطبيق الحي.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز مدرب بديل من اللجنة
+                            لتغطية أساسيات Git في حال أي طارئ.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الإعلامية والمنصات</h3>
+                        <span class="outline-number text-4xl">04</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-sky-400"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصميم ونشر إعلان ورشة Git &
+                            GitHub عبر منصات التواصل.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• نشر ملخص لأهم أوامر Git مع
+                            تغطية ختام الورشة على LinkedIn وFacebook.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العلاقات العامة</h3>
+                        <span class="outline-number text-4xl">05</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-purple-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التواصل مع المدرب أ. أحمد
+                            لتأكيد تفاصيل اللقاء ومحاور التطبيق.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إرسال شهادة الشكر والتقدير
+                            للمدرب والجهة الشريكة.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== شيت 7 ==================== -->
+        <section id="sheet-7" class="scroll-mt-36 space-y-5">
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-teal-500"></div>
+                <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold">
+                    <span class="bg-[#0b192c] text-teal-400 px-3 py-1 rounded-full">شيت 7 من 7</span>
+                    <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full">وجاهي (فرع غزة)</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full">الأربعاء 25/11/2026 • 10:00 ص –
+                        1:00 م</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0b192c] mb-2">الاستعداد لسوق العمل التقني (المسار
+                    المهني) + ختام الأسبوع التقني</h2>
+                <p class="text-sm text-slate-600">المحاضرون: <strong class="text-[#0b192c]">محاضرو وموظفو
+                        الجامعة</strong> | الجهة: <strong class="text-[#0b192c]">جامعة الأقصى</strong></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الأنشطة والفعاليات</h3>
+                        <span class="outline-number text-4xl">01</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-teal-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• حجز وتجهيز القاعة الكبرى في
+                            فرع غزة للحفل الختامي والورشة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز منصة التكريم والصوتيات
+                            وترتيب فقرات برنامج الختام.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إدارة الحفل الختامي وتنظيم
+                            تسليم الشهادات والدروع.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العضوية والانتساب</h3>
+                        <span class="outline-number text-4xl">02</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-amber-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إعداد فورم التسجيل لليوم
+                            الختامي وحصر حضور كافة الورشات السابقة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• استقبال الحضور في فرع غزة
+                            وتوثيق الكشف الختامي الشامل للأسبوع.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إعداد الإحصائية النهائية
+                            لأعداد المستفيدين والمنتسبين الجدد.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">اللجنة التقنية والتدريب</h3>
+                        <span class="outline-number text-4xl">03</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-emerald-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إعداد فيديو/عرض حصاد إنجازات
+                            الأسبوع التقني لعرضه في الختام.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• مساندة المحاضرين تقنياً
+                            وتجهيز نماذج السير الذاتية للمراجعة الحية.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• إصدار وإرسال الشهادات الرقمية
+                            لجميع المشاركين في الأسبوع التقني.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة الإعلامية والمنصات</h3>
+                        <span class="outline-number text-4xl">04</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-sky-400"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تصميم بوستر اليوم الختامي
+                            ودعوة الطلبة للمشاركة في فرع غزة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تغطية إعلامية شاملة للحفل
+                            الختامي والتكريمات وتصوير الفريق.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• نشر التقرير الختامي الشامل
+                            للأسبوع التقني على كافة منصات النادي.</li>
+                    </ul>
+                </article>
+
+                <article class="committee-card rounded-2xl p-5 text-white">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-base font-extrabold">لجنة العلاقات العامة</h3>
+                        <span class="outline-number text-4xl">05</span>
+                    </div>
+                    <div class="h-1 w-full rounded-full mb-3 bg-purple-500"></div>
+                    <ul class="space-y-2 text-xs text-slate-200">
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• التنسيق مع محاضري وموظفي
+                            الجامعة المشاركين في ندوة المسار المهني.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• تجهيز شهادات الشكر والدروع
+                            التقديرية لجميع المدربين والجهات الداعمة.</li>
+                        <li class="bg-[#081322] p-2.5 rounded-xl border border-white/10">• استقبال ضيوف الشرف وإدارة
+                            بروتوكول التكريم الختامي.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-[#0b192c] text-slate-400 text-xs py-3 border-t border-teal-500/20 mt-10">
+        <div
+            class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>© 2026 النادي الهندسي والتكنولوجي (ETC) - جامعة الأقصى.</p>
+            <p dir="ltr" class="text-slate-300">
+                <span class="text-teal-400 font-semibold">Contact:</span> Ibtisame Aqeel Safi |
+                <span class="text-teal-400 font-semibold">Phone:</span> +970 597408730
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
